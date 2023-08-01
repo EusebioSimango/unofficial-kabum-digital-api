@@ -1,137 +1,74 @@
+<a name="readme-top"></a>
+
 # Unofficial Kabum Digital API
 
-## 💻 Project
+This is an unofficial [Kabum Digital](https://kabum.digital/) API. The API provides endpoints to access posts and their content from the Kabum Digital website.
+For detailed information about the endpoints, please check [endpoints.md](endpoints.md).
 
-This a unofficial <a href="https://kabum.digital/" target="_blank">Kabum Digital</a> API, created by me to get posts.
+## Tech stack 📚
 
-## Endpoints
+<p>
+  <a href="https://expressjs.com/">
+    <img src="https://img.shields.io/badge/express.js-fff?style=for-the-badge&logo=express&logoColor=black" alt="Express.js"/>
+  </a>
+  <a href="https://redis.com/">
+    <img src="https://img.shields.io/badge/redis-ff0000?style=for-the-badge&logo=redis&logoColor=white" alt="TailWind CSS Official Website"/>
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/typescript-2F74C0?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript official Website"/>
+  </a>
+</p>
 
-### Random
-
-To get posts from a random page access the following endpoint:
-<pre>
-  <code>
-  https://kabum-digital.herokuapp.com/random
-  </code>
-</pre>
-
-
-Response example:
-<pre>
-<code>
-{
-  "posts": [
-    {
-      "title": "O efeito do Y combinator nas startups Africanas",
-      "link": "https://kabum.digital/o-efeito-do-y-combinator-nas-startups-africanas/"
-    },
-    {
-      "title": "Homens mais ricos da tecnologia em Moçambique",
-      "link": "https://kabum.digital/homens-mais-ricos-da-tecnologia-em-mocambique/"
-    },
-    ....
-  ]
-}
-</code>
-</pre>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## 🚀 How to Run Locally
 
-### Most read
+To run the project locally, follow these steps:
 
-To get most read posts access the following endpoint
-<pre>
-  <code>
-  https://kabum-digital.herokuapp.com/mostread
-  </code>
-</pre>
+1. Clone the repository from GitHub:
 
+   ```
+   git clone https://github.com/JefferMarcelino/unofficial-kabum-digital-api.git
+   ```
 
-Response example:
-<pre>
-<code>
-{
-  "posts": [
-    {
-      "title": "Bill Gates busca por talentos em Moçambique",
-      "link": "https://kabum.digital/bill-gates-busca-por-talentos-em-mocambique/"
-    },
-    {
-      "title": "Cientista angolano desenvolve robô cristão",
-      "link": "https://kabum.digital/cientista-angolano-desenvolve-robo-cristao/"
-    },
-    ...
-  ]
-}
-</code>
-</pre>
+2. Install dependencies:
 
+   ```
+   cd unofficial-kabum-digital-api
+   npm install
+   ```
+
+3. Ensure you have Redis installed and running on your machine.
+
+4. Start the local server:
+
+   ```
+   npm run dev
+   ```
+
+The API should now be accessible at `http://localhost:3000`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### All posts from a page
+## Contributing
 
-To get all posts from a specific page use
-<pre>
-<code>
-https://kabum-digital.herokuapp.com/all/:page
-</code>
-</pre>
-Are available 30 pages at the moment.
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-Response/get example:
-<pre>
-<code>https://kabum-digital.herokuapp.com/all/5</code>
-<code>
-{
-  "posts": [
-    ...,
-    {
-      "title": "LayLizzy dá luz ao seu primeiro Podcast",
-      "link": "https://kabum.digital/laylizzy-da-luz-ao-seu-primeiro-podcast/"
-    },
-    {
-      "title": "Geraldine Geraldo digitaliza o comércio informal em Angola",
-      "link": "https://kabum.digital/geraldine-geraldo-digitaliza-o-comercio-informal-em-angola/"
-    },
-    ...
-  ]
-}
-</code>
-</pre>
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feat/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: add caching to improve performance'`)
+4. Push to the Branch (`git push origin feat/AmazingFeature`)
+5. Open a Pull Request
 
-
-
-### Get a post content
-
-To get post content use
-<code>
-https://kabum-digital.herokuapp.com/post/:id
-</code>
-
-Response example:
-<pre>
-<code>https://kabum-digital.herokuapp.com/post/entre-htmls-e-javas-conheca-o-jose-pedro-dava/"</code>
-<code>
-{
-  "post": {
-    "title": "Entre “HTMLs e Javas”: conheça o José Pedro Dava",
-    "link": "https://kabum.digital/entre-htmls-e-javas-conheca-o-jose-pedro-dava",
-    "image": "https://kabum.digital/wp-content/uploads/2022/08/KABUM_Media_artigo_cover-01-1160x829.jpeg",
-    "content": [
-      "Chama-se José Pedro Dava, nasceu em Maputo, é Desenvolvedor de software há mais de 10 anos e entusiasta de UI/UX.",
-      "A sua interação com a actual área em que actua aconteceu através de um concurso de matemática, na secundária e pelo seu sonho de desenvolverjogos.",
-      "É formado em Engenharia informática, CCNA e UI/UX e através da sua área busca pela consistência em termos de design de aplicativos, web apps e criação destas plataformas para resolução de problemas sociais.",
-      ...
-    ]
-  }
-}
-</code>
-</pre>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License
 
-This project is under MIT license. See the [LICENSE](./LICENSE) file for more details.
+This project is under the MIT license. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
-Made by ♥ :wave: [Jeffer Marcelino!](https://github.com/JefferMarcelino/)
+Made with ♥ by [Jeffer Marcelino](https://github.com/JefferMarcelino/)
